@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nairobi Smart Agent (Hybrid AI)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Nairobi Smart Concierge</h1>
+      <div id="connection-badge" class="badge online">System Online</div>
+    </header>
+
+    <main class="container">
+      <section class="panel input-panel">
+        <h2>1. Share Your Plans</h2>
+        <p class="instruction">
+          Type out your messy itinerary or tasks for the day below.
+        </p>
+        <textarea
+          id="itinerary-input"
+          placeholder="e.g., Need to check out a tech hub around Kilimani, grab lunch at a local spot, and then find a matatu stage heading back to CBD by 4pm..."
+        ></textarea>
+
+        <div class="button-group">
+          <button id="process-btn" class="btn-primary">
+            Process Layout (Hybrid AI)
+          </button>
+          <button id="direct-btn" class="btn-danger">
+            Direct Cloud Prompt (Unsecured)
+          </button>
+        </div>
+
+        <p class="demo-tip">
+          💡Click <em>Process Layout</em> to run Web Hybrid Inference. Click
+          <em>Direct Cloud Prompt</em> to see how Firebase Template-Only Mode
+          blocks client-constructed prompts.
+        </p>
+      </section>
+
+      <section class="panel output-panel">
+        <h2>2. Generated Smart Itinerary</h2>
+
+        <div
+          class="engine-telemetry"
+          style="flex-direction: column; align-items: flex-start; gap: 8px"
+        >
+          <div
+            style="
+              display: flex;
+              gap: 8px;
+              align-items: center;
+              flex-wrap: wrap;
+            "
+          >
+            <span>Routing Execution Path:</span>
+            <strong id="engine-path">Awaiting Input...</strong>
+          </div>
+          <div
+            id="latency-container"
+            style="display: none; font-size: 0.85rem; color: var(--text-muted)"
+          >
+            Latency:
+            <strong
+              id="latency-val"
+              style="
+                color: var(--accent-gold);
+                font-family: &quot;JetBrains Mono&quot;, monospace;
+              "
+              >-</strong
+            >
+            ms
+          </div>
+        </div>
+
+        <div id="output-display" class="output-placeholder">
+          Your structured daily schedule will render here in real-time.
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
