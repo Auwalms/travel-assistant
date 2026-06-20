@@ -11,6 +11,8 @@ This app is developed as a developer-facing demo for **Google I/O Extended Nairo
 ## Key Features Demonstrated
 
 ### 1. Web Hybrid Inference (Automatic & Zero Cost)
+![Web Hybrid Inference Side-by-Side: On-Device Chrome Nano (Left) vs. Firebase Cloud Fallback (Right)](https://github.com/user-attachments/assets/f848ec8f-9e43-49e8-b90b-de08b0890678)
+*Figure 1: Web Hybrid Inference Side-by-Side comparison — On-Device Chrome Nano (Left) vs. Firebase Cloud Fallback (Right).*
 
 - **On-Device Primary Execution**: The application attempts to execute prompts locally in the user's browser using Chrome's built-in **Gemini Nano** model, requiring zero cloud tokens and incurring **$0.00 cost**.
 - **Automatic Cloud Fallback**: If the browser does not support on-device inference, or the local model is not downloaded yet, the Firebase SDK automatically falls back to **Gemini 3.5 Flash** in the cloud.
